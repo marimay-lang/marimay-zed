@@ -1,0 +1,23 @@
+id = "ruda"
+name = "Ruda"
+version = "0.1.0"
+schema_version = 1
+description = "Ruda language support for Zed."
+repository = "https://github.com/ruda-lang/ruda-zed"
+authors = ["Ruda contributors"]
+languages = ["languages/ruda"]
+capabilities = []
+
+[lib]
+
+[grammars.ruda]
+repository = "file:///home/marimay/Projects/ai-projects/tree-sitter-ruda"
+rev = "ba1d38f45b8466e4882d16b0ca6198970c9545b9"
+
+[language_servers]
+
+[context_servers]
+
+[agent_servers]
+
+[slash_commands]

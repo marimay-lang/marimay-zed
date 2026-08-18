@@ -1,0 +1,26 @@
+#!/bin/sh
+set -eu
+
+root=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+grammar_root=${RUDA_TREE_SITTER_REPO:-"$root/../tree-sitter-ruda"}
+tree_sitter="$grammar_root/node_modules/.bin/tree-sitter"
+library="$grammar_root/build/ruda.dylib"
+fixture="$grammar_root/test/fixtures/all-productions.ruda"
+
+if [ ! -x "$tree_sitter" ]; then
+  printf 'missing Tree-sitter CLI: run npm install in %s\n' "$grammar_root" >&2
+  exit 1
+fi
+
+if [ ! -f "$library" ]; then
+  "$tree_sitter" build -o "$library" "$grammar_root"
+fi
+
+for query in "$root"/languages/ruda/*.scm; do
+  "$tree_sitter" query --quiet \
+    --lib-path "$library" \
+    --lang-name ruda \
+    "$query" \
+    "$fixture"
+  printf 'query: ok: %s\n' "$(basename "$query")"
+done
