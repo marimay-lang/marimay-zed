@@ -1,6 +1,6 @@
-name = "Ruda"
-grammar = "ruda"
-path_suffixes = ["ruda"]
+name = "Marimay"
+grammar = "marimay"
+path_suffixes = ["my"]
 line_comments = ["// "]
 tab_size = 2
 hard_tabs = false

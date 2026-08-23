@@ -1,10 +1,10 @@
-# Ruda for Zed
+# Marimay for Zed
 
-Local Zed language extension for the Ruda programming language.
+Local Zed language extension for the Marimay programming language.
 
 It provides:
 
-- `.ruda` file detection;
+- `.my` file detection;
 - syntax highlighting;
 - matching and automatic brackets;
 - automatic indentation;
@@ -14,13 +14,14 @@ It provides:
 
 The extension intentionally has no language server yet. Semantic diagnostics,
 completion, and go-to-definition will later be supplied by the first-party
-Ruda compiler service through LSP.
+Marimay compiler service through LSP.
 
 ## Local development installation
 
-In Zed, run `zed: install dev extension` and select this directory. The local
-manifest points at the sibling `tree-sitter-ruda` repository and pins its Git
-revision.
+In Zed, run `zed: install dev extension` and select this directory. The
+manifest pins an exact revision of the Tree-sitter grammar in the Marimay
+organization. The validation script uses the sibling local grammar checkout by
+default.
 
 ## Validation
 
@@ -28,5 +29,5 @@ revision.
 ./scripts/check
 ```
 
-This compiles every Zed query against the pinned Ruda syntax tree and runs it
+This compiles every Zed query against the pinned Marimay syntax tree and runs it
 over the representative all-productions fixture.

@@ -1,18 +1,18 @@
-id = "ruda"
-name = "Ruda"
+id = "marimay"
+name = "Marimay"
 version = "0.1.0"
 schema_version = 1
-description = "Ruda language support for Zed."
-repository = "https://github.com/ruda-lang/ruda-zed"
-authors = ["Ruda contributors"]
-languages = ["languages/ruda"]
+description = "Marimay language support for Zed."
+repository = "http://gitea.example.invalid:3000/Marimay/marimay-zed"
+authors = ["Marimay contributors"]
+languages = ["languages/marimay"]
 capabilities = []
 
 [lib]
 
-[grammars.ruda]
-repository = "file:///home/marimay/Projects/ai-projects/tree-sitter-ruda"
-rev = "ba1d38f45b8466e4882d16b0ca6198970c9545b9"
+[grammars.marimay]
+repository = "ssh://git@gitea.example.invalid:2222/Marimay/tree-sitter-marimay.git"
+rev = "3983fd552016b030d94ce6e021888c04a87e7bda"
 
 [language_servers]
 
