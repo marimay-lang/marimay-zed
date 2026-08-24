@@ -23,13 +23,7 @@
   "]" @end) @indent
 
 (tuple_pattern
-  ")" @end) @indent
-
-(tuple_expression
-  ")" @end) @indent
-
-(tuple_type
-  ")" @end) @indent
+  "]" @end) @indent
 
 (arguments
   ")" @end) @indent

@@ -63,6 +63,7 @@
 [
   "as"
   "break"
+  "case"
   "const"
   "continue"
   "defer"
@@ -74,11 +75,11 @@
   "from"
   "if"
   "import"
-  "in"
   "interface"
   "let"
   "match"
   "mutable"
+  "of"
   "public"
   "return"
   "scope"
@@ -86,6 +87,7 @@
   "type"
   "unsafe"
   "while"
+  "yield"
 ] @keyword
 
 ; Operators and punctuation

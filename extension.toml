@@ -12,7 +12,7 @@ capabilities = []
 
 [grammars.marimay]
 repository = "ssh://git@gitea.example.invalid:2222/Marimay/tree-sitter-marimay.git"
-rev = "44e56203190747a59cb3d3f4ec21e49382751fce"
+rev = "3983fd552016b030d94ce6e021888c04a87e7bda"
 
 [language_servers]
 
