@@ -2,6 +2,10 @@
 
 Local Zed language extension for the Marimay programming language.
 
+Version 0.1.1 targets the Marimay `0.1.0-alpha.1` toolchain and its
+`0.1-design` language surface. The pinned grammar enforces the current Unicode
+XID identifier rules, hard keywords, and reserved null-like sentinels.
+
 It provides:
 
 - `.my` file detection;
