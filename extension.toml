@@ -3,7 +3,7 @@ name = "Marimay"
 version = "0.1.1"
 schema_version = 1
 description = "Marimay language support for Zed."
-repository = "http://gitea.example.invalid:3000/Marimay/marimay-zed"
+repository = "https://github.com/marimay-lang/marimay-zed"
 authors = ["Marimay contributors"]
 languages = ["languages/marimay"]
 capabilities = []
@@ -11,8 +11,8 @@ capabilities = []
 [lib]
 
 [grammars.marimay]
-repository = "ssh://git@gitea.example.invalid:2222/Marimay/tree-sitter-marimay.git"
-rev = "4c543d4eab9685d1ff051b126142bc91882ae00e"
+repository = "https://github.com/marimay-lang/tree-sitter-marimay.git"
+rev = "98a0e9ff2c104727ee8db2e50a7bbd7263505309"
 
 [language_servers]
 

@@ -1,0 +1,38 @@
+name: Zed syntax support CI
+
+"on":
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  linux:
+    name: Validate editor queries against the grammar
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out extension source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: marimay-zed
+          persist-credentials: false
+      - name: Check out public syntax grammar
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: marimay-lang/tree-sitter-marimay
+          ref: main
+          path: tree-sitter-marimay
+          persist-credentials: false
+      - name: Install locked grammar tooling
+        working-directory: tree-sitter-marimay
+        run: npm ci
+      - name: Test grammar and create its query library
+        working-directory: tree-sitter-marimay
+        run: npm test
+      - name: Validate Zed highlighting and outline queries
+        working-directory: marimay-zed
+        run: ./scripts/check
